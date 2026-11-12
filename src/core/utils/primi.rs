@@ -45,7 +45,7 @@ pub enum Primi {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub enum STRT_Zilamma {
 
     CallFunction(TEMEM_Function),
@@ -66,7 +66,7 @@ pub enum STRT_Zilamma {
 }
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub enum EXPR_Primi {
 
     String(String),
@@ -102,7 +102,7 @@ pub enum EXPR_Primi {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub enum SignalType {
     NewValue
 }

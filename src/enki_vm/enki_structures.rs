@@ -1,3 +1,4 @@
+use serde;
 use std::collections::HashMap;
 
 use crate::enki_vm::UdaDeclarationType;
@@ -29,7 +30,7 @@ pub struct UDA {
 
 
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, serde::Serialize)]
 pub struct LUNIG {
     pub id: String,
     pub data: HashMap<String, UdaDeclarationType>,

@@ -13,7 +13,7 @@ use std::collections::HashMap;
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Function {
     pub name: String,
     pub args: Vec<EXPR_Primi>
@@ -25,7 +25,7 @@ pub struct TEMEM_Function {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_ObjFunction {
     pub obj_name: String,
     pub name: String,
@@ -38,7 +38,7 @@ pub struct TEMEM_ObjFunction {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_TempVariable {
 
     pub name: String,
@@ -56,7 +56,7 @@ pub struct TEMEM_TempVariable {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_EditVariable {
 
     pub name: String,
@@ -71,7 +71,7 @@ pub struct TEMEM_EditVariable {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Lunig {
     pub id: String,
     pub data: HashMap<String, UdaDeclarationType>,
@@ -85,7 +85,7 @@ pub struct TEMEM_Lunig {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_EditLunig {
     pub lunig_id: String,
     pub path_prop: EXPR_Primi,
@@ -101,7 +101,7 @@ pub struct TEMEM_EditLunig {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Anki {
     pub fnc: Box<STRT_Zilamma>
 }
@@ -117,7 +117,7 @@ pub struct TEMEM_Anki {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Maru {
     pub path: String,
 }
@@ -132,7 +132,7 @@ pub struct TEMEM_Maru {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Gish {
     pub id: String,
     pub enums: Vec<EXPR_Primi>
@@ -145,7 +145,7 @@ pub struct TEMEM_Gish {
 
 
 
-#[derive(Debug, PartialEq, Clone)]
+#[derive(Debug, PartialEq, Clone, serde::Serialize)]
 pub struct TEMEM_Suma {
     pub conditions: Vec<EXPR_Primi>,
     pub acts_suma: Vec<STRT_Zilamma>,

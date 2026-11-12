@@ -1,5 +1,18 @@
 # Zigurate Lang
 
+<div align="left">
+
+<img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
+<img src="https://img.shields.io/badge/Edition-2021-orange?style=for-the-badge&logo=rust&logoColor=white" alt="Rust Edition" />
+
+<img src="https://img.shields.io/badge/Status-Beta%206-blue?style=for-the-badge" alt="Status Beta 6" />
+<img src="https://img.shields.io/github/v/release/G4brielXavier/ZigurateDSL?style=for-the-badge&color=brightgreen" alt="Release" />
+
+<img src="https://img.shields.io/github/license/G4brielXavier/ZigurateDSL?style=for-the-badge&color=yellow" alt="License" />
+<img src="https://img.shields.io/github/issues/G4brielXavier/ZigurateDSL?style=for-the-badge&logo=github" alt="Issues" />
+
+</div>
+
 > Created specifically for my personal worldbuilding use. If you have patient to use it for your world, be free.
 
 > Nowadays, Zigurate UR1 is in deep development, so, some features still not arrive. That's why it is in beta.
@@ -50,9 +63,8 @@ enki --version
 | Milestone | Status |
 |---|---|
 | New *AnkiFunction*: `anki.:muria()` for timelines creations | ❌ |
-| Error treatments improvements | ❌ |
-| Local Database System | ❌ |
-| New CLI command: `enki galam --file` to up project to database for query | ❌ |
+| New Comparison system: `gina` (like `match` in rust) specifically to compare `GishOptions` | ❌ |
+| New CLI command: `enki galam --file` to convert/export `lunig`'s to `json` that can be used in APIs. | ✅ |
 | Official documentation with VitePress | ✅ |
 
 

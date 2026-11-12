@@ -61,7 +61,7 @@ pub enum SumaOperator {
 
 
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, serde::Serialize)]
 pub enum UdaDeclarationType {
     
     String(String),

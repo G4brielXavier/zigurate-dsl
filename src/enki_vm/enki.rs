@@ -198,8 +198,8 @@ fn manage_nv_condition(num_nvs_cond: &mut Vec<i8>, sumas: &mut SumaVisualizer) {
 pub struct EnkiVM {
     instructions: Vec<EnkiInstruction>,
 
+    pub lunig_hash: LunigData,
     uda_hash  : UdaData,
-    lunig_hash: LunigData,
     gish_hash : GishData,
 
     sita: Sita,
@@ -879,10 +879,12 @@ impl EnkiVM {
                         .map_err(|e| ZigurateError::IOError(e))?;
 
                     let forma_path = maru.path.replace("/", "\\");
+                    
                     let enki_project_data =  get_enki_data(&self.sita, &curr_path)?;
 
                     let sub_src: Vec<&str> = enki_project_data.main.split("/").collect();
                     let path_file = curr_path.join(sub_src[0]).join(PathBuf::from(forma_path));
+
 
                     let file_content = self.sita.read_file(path_file)
                         .map_err(|e| ZigurateError::IOError(e))?;

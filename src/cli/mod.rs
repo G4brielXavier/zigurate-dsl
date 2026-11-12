@@ -12,12 +12,12 @@ pub mod matches;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct EnkiProject {
-    pub zigurate_ur: u16,
     pub name: String,
-    pub desc: String,
+    pub description: String,
+    pub creator: Vec<String>,
     pub stage: String,
     pub main: String,
-    pub rules: Vec<String>
+    pub galam: Vec<String>
 }
 
 

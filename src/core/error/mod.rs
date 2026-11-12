@@ -32,7 +32,9 @@ pub enum ZigurateError {
 
     ProjectNotFoundOrNotExist,
     UnknownCallFunctionName(String),
-    PropertiesExpected(String)
+    PropertiesExpected(String),
+
+    GalamTypeSuppport
 
 }
 
@@ -67,7 +69,7 @@ impl fmt::Display for ZigurateError {
             ZigurateError::GotWrongTypeValue(e) =>  write!(f, "{}", e),
             ZigurateError::ArrayIndexExceeded(e) =>  write!(f, "{}", e),
 
-            
+            ZigurateError::GalamTypeSuppport =>  write!(f, "TypeSupport."),
             
         }
     }
@@ -78,7 +80,9 @@ impl fmt::Display for ZigurateError {
 impl Error for ZigurateError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match self {
-
+            
+            ZigurateError::GalamTypeSuppport => None,
+            
             ZigurateError::ByteConversionFailed(err) => Some(err),
 
             ZigurateError::IOError(_) => None,

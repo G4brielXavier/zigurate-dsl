@@ -12,11 +12,10 @@ pub enum Commands {
         project_name: String
     },
 
-    Export {
+    Galam {
 
-        #[arg(short, long)]
-        json: bool,
-
+        path: Option<PathBuf>
+        
     }
 
 }

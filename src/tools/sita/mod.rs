@@ -12,6 +12,24 @@ impl Sita {
     }
 
 
+    pub fn read_dir<P: AsRef<Path>>(&self, path: P) -> Result<Vec<PathBuf>, String> {
+
+        let path_ref = path.as_ref();
+
+        let pathes = fs::read_dir(path_ref)
+            .map_err(|e| format!("{:?}", e))?;
+
+        let files = pathes
+            .filter_map(|en| en.ok())
+            .map(|en| en.path())
+            .filter(|path| path.is_file())
+            .collect();
+
+        Ok(files)
+    }
+
+
+
     pub fn get_dir_by_name<P: AsRef<Path>>(&self, dirname: &str, path: P) -> Result<PathBuf, String> {
 
         let path_ref = path.as_ref();
